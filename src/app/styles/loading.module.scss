@@ -1,0 +1,108 @@
+// variable decleration omar
+$color: #3ba3ed;
+
+// class decleration omar
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 84vh;
+}
+
+.animate-pulse {
+    @keyframes pulse {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.shrink-0 {
+    flex-shrink: 0;
+}
+
+.size-12 {
+    width: 3rem;
+    height: 3rem;
+}
+
+.block {
+    display: block;
+}
+
+.bg-color {
+    background-color: $color;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.ms-4 {
+    margin-left: 1rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-4 {
+    height: 1rem;
+}
+
+.w-2-5 {
+    width: 40%;
+}
+
+.mt-5 {
+    margin-top: 1.25rem; 
+}
+
+.space-y-3>*+* {
+    margin-top: 0.75rem;
+}
+
+// Wrapper variable and class for the loading skeleton omar
+.loadingSkeleton {
+    @extend .flex, .animate-pulse;
+
+    .avatarContainer {
+        @extend .shrink-0;
+
+        .avatar {
+            @extend .size-12, .block, .bg-color, .rounded-full;
+        }
+    }
+
+    .contentContainer {
+        @extend .ms-4, .mt-2, .w-full;
+
+        .line {
+            @extend .h-4, .bg-color, .rounded-full;
+        }
+
+        .lineShort {
+            @extend .w-2-5;
+        }
+
+        .lineList {
+            @extend .mt-5, .space-y-3;
+
+            .lineItem {
+                @extend .w-full, .h-4, .bg-color, .rounded-full;
+            }
+        }
+    }
+}

@@ -1,0 +1,255 @@
+.productCard {
+    display: block;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(129, 140, 248, 0.1), 0 4px 6px -2px rgba(129, 140, 248, 0.1);
+}
+
+.productImage {
+    height: 14rem;
+    width: 100%;
+    border-radius: 0.375rem;
+    object-fit: contain;
+    border: 1px solid #e5e7eb;
+}
+
+.productInfo {
+    margin-top: 0.5rem;
+}
+
+.productPrice {
+    font-size: 1rem;
+    color: #000;
+    font-weight: 700;
+}
+
+.productOnly {
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.productTitle {
+    font-weight: 700;
+}
+
+.productActions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.productStock {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.productStockIcon {
+    width: 1rem;
+    height: 1rem;
+    color: #6366f1;
+}
+
+.productStockInfo {
+    margin-top: 0.375rem;
+
+    @media (min-width: 640px) {
+        margin-top: 0;
+    }
+}
+
+.productStockLabel {
+    color: #374151;
+    font-size: 0.75rem;
+}
+
+.productStockValue {
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+.editButton,
+.deleteButton {
+    padding: 0.2rem 0.4rem;
+    border: 1px solid #d1d5db;
+    font-weight: 400;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+    @media (min-width: 640px) {
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+    }
+}
+
+.editButton:hover {
+    background-color: #3b82f6;
+}
+
+.deleteButton:hover {
+    background-color: #8b5cf6;
+}
+
+.productRating {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.productRatingInfo {
+    margin-top: 0.375rem;
+    text-align: right;
+
+    @media (min-width: 640px) {
+        margin-top: 0;
+    }
+}
+
+.productRatingLabel {
+    color: #374151;
+    font-size: 0.75rem;
+}
+
+.productRatingValue {
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+.productRatingIcon {
+    width: 1rem;
+    height: 1rem;
+    color: #6366f1;
+}
+
+.modalOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    outline: none;
+}
+
+.modalContainer {
+    position: relative;
+    margin: 1.5rem auto;
+}
+
+.modalContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    pointer-events: auto;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.modalTitle {
+    font-weight: 700;
+}
+
+.modalBody {
+    padding: 1rem;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 640px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.formControl {
+    max-width: 16rem;
+    margin: 0.75rem;
+}
+
+.formLabel {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.formInput {
+    padding: 0.75rem 1rem;
+    width: 100%;
+    border: 1px solid #3b82f6;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+
+    &:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        outline: none;
+    }
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.closeButton {
+    padding: 0.5rem 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    border: 1px solid #d1d5db;
+    background-color: #fff;
+    color: #1f2937;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+    &:hover {
+        background-color: #f9fafb;
+    }
+}
+
+.updateButton {
+    padding: 0.5rem 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    border: 1px solid transparent;
+    background-color: #3b82f6;
+    color: #fff;
+
+    &:hover {
+        background-color: #2563eb;
+    }
+}
+
+.modalBackdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background-color: rgba(0, 0, 0, 0.25);
+}
