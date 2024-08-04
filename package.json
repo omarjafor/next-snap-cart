@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "cy:open": "cypress open",
     "lint": "next lint"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "react-redux": "^9.1.2"
   },
   "devDependencies": {
+    "cypress": "^13.13.2",
     "postcss": "^8.4.40",
     "sass": "^1.77.8",
     "tailwindcss": "^3.4.7"
