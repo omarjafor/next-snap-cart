@@ -6,10 +6,10 @@ import styles from './details.module.scss';
 
 const ProductDetails = async({params}) => {
     const user = await currentUser();
-    // if(!user) redirect('/sign-in')
+    if(!user) redirect('/sign-in')
 
     const details = await fetchProductDetailsAction(params?.details);
-    console.log(details);
+    // console.log(details);
     return (
         <div className={styles.container}>
             <div className={styles.innerContainer}>
